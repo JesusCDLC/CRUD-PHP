@@ -18,12 +18,12 @@
 
 <section>
 
-    <?php 
+<?php 
 
-        $rutas = new RutasControlador();
-        $rutas -> Rutas();
-    
-    ?>
+    $rutas = new RutasControlador();
+    $rutas -> Rutas();
+
+?>
 
 </section>
 	

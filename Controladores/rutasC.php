@@ -10,7 +10,7 @@ class RutasControlador{
 
     public function Rutas(){
         
-        if (isset($_GET["ruta"])) {
+        if(isset($_GET["ruta"])){
 
             $rutas = $_GET["ruta"];
 
@@ -19,11 +19,10 @@ class RutasControlador{
             $rutas = "index";
         }
 
-        $respuesta = Modelo::RutasModelos($rutas);
+        $respuesta = Modelo::RutasModelo($rutas);
         include $respuesta;
 
     }
 
 
 }
-?>

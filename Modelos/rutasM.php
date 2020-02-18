@@ -1,23 +1,26 @@
 <?php 
 
-    class Modelo{
+// ini_set('error_reporting', E_ALL|E_STRICT);
+// ini_set('display_errors', '1');
+class Modelo{
 
-        static public function RutasModelos($rutas){
+    static public function RutasModelo($rutas){
+        
+        if($rutas == "ingreso" || $rutas == "registrar" || $rutas == "editar" || $rutas == "empleados" || $rutas == "salir"){
             
-            if ($rutas == "ingreso" || $rutas == "registrar" || $rutas == "empleados" || $rutas == "salir") {
-                
-                $pagina = "Vistas/modulos/" . $rutas . ".php";
-            }elseif ($rutas == "index") {
-                
-                $pagina = "Vistas/modulos/registrar.php";
-            }else{
-                $pagina = "Vistas/modulos/registrar.php";
+            $pagina = "Vistas/modulos/".$rutas.".php";
 
-            }
+        }else if($rutas == "index"){
             
-            return $pagina;
+            $pagina = "Vistas/modulos/ingreso.php";
+
+        }else{
+
+            $pagina = "Vistas/modulos/ingreso.php";
+
         }
-
+        
+        return $pagina;
     }
 
-?>
+}

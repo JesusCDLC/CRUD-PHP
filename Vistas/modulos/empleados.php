@@ -1,10 +1,13 @@
-
 <?php
+
+session_start();
 if (!$_SESSION["ingreso"]) {
 	header("location:index.php?ruta=ingreso");
+
 	exit();
 }
 ?>
+	
 	<br>
 	<h1>Empleados</h1>
 
@@ -27,16 +30,21 @@ if (!$_SESSION["ingreso"]) {
 
 		<tbody>
 			
-			<tr>
-				<td>Alejandro</td>
-				<td>Petrelli</td>
-				<td>ale@hotmail.com</td>
-				<td>Programador PHP</td>
-				<td>$ 8.000</td>
-				<td><button>Editar</button></td>
-				<td><button>Borrar</button></td>
-			</tr>
+			
+
+			<?php 
+			$mostar = new EmpleadorC();
+			$mostar->MostrarEmpleadosC();
+			?>
 
 		</tbody>
 
 	</table>
+
+	<?php 
+
+	$eliminar = new EmpleadorC();
+	$eliminar->BorrarEmpleadoC();
+
+	
+	?>

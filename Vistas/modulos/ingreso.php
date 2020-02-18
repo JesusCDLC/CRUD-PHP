@@ -1,9 +1,3 @@
-<?php
-if (!$_SESSION["ingreso"]) {
-	header("location:index.php?ruta=ingreso");
-	exit();
-}
-?>
 <br>
 	<h1>INGRESAR</h1>
 
@@ -17,7 +11,8 @@ if (!$_SESSION["ingreso"]) {
 
 	</form>
 
-	<?php
-		$ingreso = new AdminC();
-		$ingreso->IngresoC();
-	?>
+<?php
+
+	$ingreso = new AdminC();
+	$ingreso->IngresoC();
+?>
